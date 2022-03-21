@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "engines": { "npm": "8.5.5", "node": "14.16.0" },
+  "engines": {
+    "npm": "8.5.5",
+    "node": "14.16.0"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -22,6 +25,7 @@
     "express": "^4.17.3",
     "express-favicon": "^2.0.1",
     "gravatar": "^1.8.0",
+    "heroku-ssl-redirect": "^0.1.1",
     "path": "^0.12.7",
     "react-confirm-alert": "^2.6.1",
     "redux-devtools-extension": "^2.13.8",

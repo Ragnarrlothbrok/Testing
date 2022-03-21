@@ -3,7 +3,6 @@ import axios from "axios";
 import cors from "cors";
 
 export const getJobs = (page) => (dispatch) => {
-  console.log(getJobs, 'jobssss')
   dispatch(setJobLoading());
   axios
     .get(

@@ -28,7 +28,6 @@ const Jobs = ({ jobs, actions }) => {
   }
   const onJobClick = (id) => {
     getJob(id, (job) => {
-      console.log("Flow came here", job);
       setModalData({
         showJob: true,
       });

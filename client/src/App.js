@@ -19,7 +19,6 @@ import { ToastContainer, toast } from 'react-toastify';
 if (localStorage.jwtToken) {
   setAuthtoken(localStorage.jwtToken);
   const decoded = jwt_decode(localStorage.jwtToken);
-  console.log("This is coming on decoding",decoded)
   store.dispatch(setCurrentUser(decoded));
   //check for expired token //Dont know about the expiring limit
   // const currentTime = Date.now() / 1000;

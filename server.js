@@ -5,7 +5,11 @@ const path = require('path');
 const port = process.env.PORT || 8080;
 var app = express();
 // enable ssl redirect
-app.use(sslRedirect());
+app.use(sslRedirect([
+  'other',
+  'development',
+  'production'
+  ]));
 app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'client/build')));

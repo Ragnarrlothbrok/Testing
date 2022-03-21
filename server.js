@@ -16,13 +16,13 @@ app.use(bodyParser.json());
 //   'production'
 //   ]));
 app.use(cors());
-app.use(favicon(__dirname + '/build/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/ping', function (req, res) {
  return res.send('pong');
 });
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 app.listen(port);

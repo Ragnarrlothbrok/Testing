@@ -1,0 +1,35 @@
+import {
+    JOBS_LOADING,
+    GET_JOBS,
+    GET_JOB,
+  } from "../actions/types";
+  
+  const initialState = {
+    jobs: [],
+    job: {},
+    loading: false,
+  };
+  
+  export default function (state = initialState, action) {
+    switch (action.type) {
+      case JOBS_LOADING:
+        return {
+          ...state,
+          loading: true,
+        };
+      case GET_JOBS:
+        return {
+          ...state,
+          jobs: action.payload,
+          loading: false,
+        };
+      case GET_JOB:
+        return {
+          ...state,
+          job: action.payload,
+          loading: false,
+        };
+      default:
+        return state;
+    }
+  }

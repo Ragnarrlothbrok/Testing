@@ -1,0 +1,42 @@
+.appCard {
+  width: 260px;
+  background: #FFFFFF 0% 0% no-repeat;
+  height: 159px;
+  border: 1px solid #303F6080;
+  border-radius: 5px;
+  color: #303F60;
+  padding: 14px;
+  
+}
+
+.avatar {
+  background-color: #D9EFFF;
+  padding: 12px 14px;
+  border-radius: 50%;
+}
+
+.name, .email, .skillsList {
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+.name {
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.skillsList span, .name {
+  font-weight: 500;
+}
+
+.skillsList {
+  margin-top: 12px;
+}
+
+.cut-text { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 160px; 
+  height: 1.2em; 
+  white-space: nowrap;
+}

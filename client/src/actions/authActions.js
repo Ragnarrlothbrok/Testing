@@ -55,6 +55,5 @@ export const logoutUser = () => (dispatch) => {
   localStorage.removeItem("jwtToken");
   setAuthToken(false);
   dispatch(setCurrentUser({}));
-  window.location.href = "/login";
   toast.success("You have successfully logged out.")
 };

@@ -7,7 +7,7 @@ export const getJobs = (page) => (dispatch) => {
   dispatch(setJobLoading());
   axios
     .get(
-      '/recruiters/jobs',
+      'https://jobs-api.squareboat.info/api/v1/recruiters/jobs',
       {
         params: {
           page,
@@ -33,7 +33,7 @@ export const getJobs = (page) => (dispatch) => {
 export const getJob = (job_id, callback) => (dispatch) => {
   dispatch(setJobLoading());
   axios
-    .get(`recruiters/jobs/${job_id}/candidates`, { mode: cors })
+    .get(`https://jobs-api.squareboat.info/api/v1/recruiters/jobs/${job_id}/candidates`, { mode: cors })
     .then((res) =>
       {dispatch({
         type: GET_JOB,
